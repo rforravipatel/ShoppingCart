@@ -9,10 +9,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
+<link href="CSS/indexcss.css" rel="stylesheet" type="text/css">
 </head>
 <body>
 <jsp:useBean id="service" class="com.demo.service.ProductService" />
-<a href="insert.html">Insert</a>
+<a href="insert.html">
+	<img alt="Insert" id= "img_1" src="Images/insert.png">
+</a>
 <%
 	
 	ArrayList<Product> list = service.viewAll();
@@ -38,8 +41,8 @@
 		<td><%=p.getName() %></td>
 		<td><%=p.getPrice() %></td>
 		<td><%=p.getSeller() %></td>
-		<td><a href=<%="editProduct.jsp?id=" +p.getId() %>>Edit</a></td>  
-        <td><a href=<%="deleteProduct.jsp?id=" +p.getId() %>>Delete</a></td> 
+		<td><a href=<%="editProduct.jsp?id=" +p.getId() %>><img id="img_3" src="Images/edit.png" ></a></td>  
+        <td><a href=<%="deleteProduct.jsp?id=" +p.getId() %>><img id="img_2" src="Images/delete.png" ></a></td> 
 	</tr>
 <%
 	}
